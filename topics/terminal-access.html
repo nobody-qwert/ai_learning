@@ -1,0 +1,44 @@
+<h2>Terminal Access</h2>
+<p>Command-line interfaces and tools for interacting with AI models and services.</p>
+
+<h3>OpenAI CLI</h3>
+<div class="code-block">
+# Install OpenAI CLI
+pip install openai
+
+# Set API key
+export OPENAI_API_KEY="your-api-key-here"
+
+# Make API calls
+openai api completions.create \
+  -m text-davinci-003 \
+  -p "Explain quantum computing" \
+  --max-tokens 100
+</div>
+
+<h3>Ollama</h3>
+<p>Run large language models locally via command line:</p>
+<div class="code-block">
+# Install and run Llama 2
+ollama run llama2
+
+# Chat with the model
+>>> Hello! How can I help you today?
+
+# Run specific model variants
+ollama run codellama:7b
+</div>
+
+<h3>Curl API Requests</h3>
+<div class="highlight">
+    <p>Direct API access for automation and scripting:</p>
+</div>
+<div class="code-block">
+curl -X POST https://api.openai.com/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $OPENAI_API_KEY" \
+  -d '{
+    "model": "gpt-3.5-turbo",
+    "messages": [{"role": "user", "content": "Hello!"}]
+  }'
+</div>

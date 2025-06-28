@@ -1,0 +1,1 @@
+https://nobody-qwert.github.io/ai_learning/

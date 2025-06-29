@@ -3,50 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LLM Topics Hub</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>AI Learning Hub</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/content.css">
 </head>
 <body>
     <div class="container">
-        <nav class="sidebar" id="sidebar">
-            <div class="sidebar-header">
-                <h2>LLM Topics Hub</h2>
-                <p>Explore AI & Language Models</p>
-            </div>
-            <div class="topics-list">
-                <div class="topic-item" data-topic="sample-prompts">Sample Prompts</div>
-                <div class="topic-item" data-topic="different-ais">Different AIs</div>
-                <div class="topic-item" data-topic="lmstudio">LMStudio</div>
-                <div class="topic-item" data-topic="hugging-face">Hugging Face</div>
-                <div class="topic-item" data-topic="vscode-agents">VSCode Agents</div>
-                <div class="topic-item" data-topic="terminal-access">Terminal Access</div>
-                <div class="topic-item" data-topic="comparing-agents">Comparing Agents</div>
-                <div class="topic-item" data-topic="context-engineering">Context Engineering</div>
-            </div>
-        </nav>
-
-        <button class="toggle-btn" id="toggleBtn">☰</button>
-
-        <main class="main-content">
-            <div class="content-area">
-                <div class="content-header">
-                    <h1>AI & LLM Knowledge Base</h1>
+        <aside class="sidebar">
+            <header class="sidebar-header">
+                <h1>AI Learning Hub</h1>
+                <div class="version">v1.0.0</div>
+            </header>
+            
+            <nav class="topic-nav">
+                <div class="topic-section">
+                    <button class="topic-header" data-topic="ai-models">
+                        <span class="topic-icon">></span>
+                        <span class="topic-title">AI Models</span>
+                    </button>
+                    <div class="subtopic-list" id="ai-models-subtopics">
+                        <div class="subtopic-item" data-content="ai-models-top">
+                            <span class="subtopic-bullet">•</span>
+                            <span class="subtopic-name">Top AI Models</span>
+                        </div>
+                        <div class="subtopic-item" data-content="ai-models-opensource">
+                            <span class="subtopic-bullet">•</span>
+                            <span class="subtopic-name">Open Source AI Models</span>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="content-body">
-                    <div class="welcome-content" id="welcome-content">
-                        <h2>Welcome to the LLM Topics Hub</h2>
-                        <p>Select a topic from the sidebar to explore comprehensive guides, examples, and best practices for working with Large Language Models and AI tools.</p>
+                <div class="topic-section">
+                    <button class="topic-header" data-topic="prompting-ai">
+                        <span class="topic-icon">></span>
+                        <span class="topic-title">Prompting AI</span>
+                    </button>
+                    <div class="subtopic-list" id="prompting-ai-subtopics">
+                        <!-- Subtopics will be populated by JavaScript -->
                     </div>
-
-                    <div class="topic-content" id="topic-content">
-                        <!-- Topic content will be loaded here dynamically -->
+                </div>
+                
+                <div class="topic-section">
+                    <button class="topic-header" data-topic="agents">
+                        <span class="topic-icon">></span>
+                        <span class="topic-title">Agents</span>
+                    </button>
+                    <div class="subtopic-list" id="agents-subtopics">
+                        <div class="subtopic-item" data-content="agents-overview">
+                            <span class="subtopic-bullet">•</span>
+                            <span class="subtopic-name">Overview</span>
+                        </div>
+                        <div class="subtopic-item" data-content="github-copilot">
+                            <span class="subtopic-bullet">•</span>
+                            <span class="subtopic-name">GitHub Copilot</span>
+                        </div>
+                        <div class="subtopic-item" data-content="claude-code">
+                            <span class="subtopic-bullet">•</span>
+                            <span class="subtopic-name">Claude Code</span>
+                        </div>
+                        <div class="subtopic-item" data-content="google-gemini">
+                            <span class="subtopic-bullet">•</span>
+                            <span class="subtopic-name">Google Gemini</span>
+                        </div>
+                        <div class="subtopic-item" data-content="openai-codex">
+                            <span class="subtopic-bullet">•</span>
+                            <span class="subtopic-name">OpenAI Codex</span>
+                        </div>
+                        <div class="subtopic-item" data-content="cline-ai">
+                            <span class="subtopic-bullet">•</span>
+                            <span class="subtopic-name">Cline AI</span>
+                        </div>
+                        <div class="subtopic-item" data-content="agents-architecture">
+                            <span class="subtopic-bullet">•</span>
+                            <span class="subtopic-name">Architecture</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic-section">
+                    <button class="topic-header" data-topic="local-setup">
+                        <span class="topic-icon">></span>
+                        <span class="topic-title">Local Setup</span>
+                    </button>
+                    <div class="subtopic-list" id="local-setup-subtopics">
+                        <div class="subtopic-item" data-content="setup-environment">
+                            <span class="subtopic-bullet">•</span>
+                            <span class="subtopic-name">Environment</span>
+                        </div>
+                        <div class="subtopic-item" data-content="setup-tools">
+                            <span class="subtopic-bullet">•</span>
+                            <span class="subtopic-name">Tools</span>
+                        </div>
+                        <div class="subtopic-item" data-content="lm-studio-setup">
+                            <span class="subtopic-bullet">•</span>
+                            <span class="subtopic-name">LM Studio Setup</span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+        
+        <main class="content">
+            <div class="content-header">
+                <div class="breadcrumb" id="breadcrumb">
+                    <span class="breadcrumb-item">Select a topic</span>
+                </div>
+            </div>
+            
+            <div class="content-body" id="content-body">
+                <div class="welcome-message">
+                    <h2>Welcome to AI Learning Hub</h2>
+                    <p>Select a topic from the sidebar to explore AI prompts, agent architectures, and local development setups.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number" id="prompt-count">0</span>
+                            <span class="stat-label">Prompts</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">8</span>
+                            <span class="stat-label">Topics</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Setup Guides</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </main>
     </div>
-
-    <script src="script.js"></script>
+    
+    <script src="scripts/content/ai-models-content.js"></script>
+    <script src="scripts/content/agents-content.js"></script>
+    <script src="scripts/content/setup-content.js"></script>
+    <script src="scripts/content-manager.js"></script>
+    <script src="scripts/topics.js"></script>
+    <script src="scripts/loader.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>

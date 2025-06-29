@@ -27,7 +27,7 @@ class PromptLoader {
         try {
             // Create script element to load the prompt file
             const script = document.createElement('script');
-            script.src = `../prompts/${filename}`;
+            script.src = `./prompts/${filename}`;
             
             return new Promise((resolve, reject) => {
                 script.onload = () => {

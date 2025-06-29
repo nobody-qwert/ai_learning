@@ -106,6 +106,12 @@ class ContentManager {
         } else {
             console.warn('SetupContent not found');
         }
+        
+        if (window.DangersContent) {
+            this.registerModule('dangers', window.DangersContent);
+        } else {
+            console.warn('DangersContent not found');
+        }
 
         // Load all content
         this.loadAllContent();
@@ -123,7 +129,8 @@ class ContentManager {
                 const availableModules = [
                     window.AIModelsContent,
                     window.AgentsContent,
-                    window.SetupContent
+                    window.SetupContent,
+                    window.DangersContent
                 ].filter(Boolean);
                 
                 if (availableModules.length > 0 || waited >= maxWait) {

@@ -48,6 +48,18 @@ class TopicManager {
                         description: 'Essential development tools and utilities'
                     }
                 ]
+            },
+            'dangers': {
+                id: 'dangers',
+                title: 'Dangers',
+                description: 'Security risks and vulnerabilities in AI systems',
+                subtopics: [
+                    {
+                        id: 'code-injection',
+                        title: 'Code Injection',
+                        description: 'Understanding and preventing code injection attacks on AI systems'
+                    }
+                ]
             }
         };
     }

@@ -2,94 +2,6 @@
 class SetupContent {
     static getContent() {
         return {
-            'setup-environment': {
-                breadcrumb: ['Local Setup', 'Environment'],
-                title: 'Development Environment Setup',
-                content: `
-                    <div class="content-section">
-                        <h3>Prerequisites</h3>
-                        <ul>
-                            <li>Node.js (v16 or higher)</li>
-                            <li>Python (v3.8 or higher)</li>
-                            <li>Git version control</li>
-                            <li>Code editor (VS Code recommended)</li>
-                        </ul>
-                        
-                        <h3>AI Development Tools</h3>
-                        <ul>
-                            <li>Jupyter Notebook for experimentation</li>
-                            <li>Docker for containerization</li>
-                            <li>Virtual environments (venv, conda)</li>
-                            <li>GPU drivers for deep learning</li>
-                        </ul>
-                        
-                        <h3>Package Managers</h3>
-                        <ul>
-                            <li>npm/yarn for JavaScript packages</li>
-                            <li>pip for Python packages</li>
-                            <li>conda for scientific computing</li>
-                        </ul>
-                        
-                        <h3>Self-Hosted AI Coding Setup</h3>
-                        <p>Complete local development environment using LM Studio + VS Code + Cline AI for privacy-focused AI coding assistance:</p>
-                        <ul>
-                            <li><strong>LM Studio:</strong> Local LLM server running Mistral Codestral or other code models</li>
-                            <li><strong>VS Code:</strong> Primary development environment with extensions</li>
-                            <li><strong>Cline AI:</strong> Autonomous coding agent connected to local LM Studio endpoint</li>
-                        </ul>
-                        
-                        <h3>Benefits of Local Setup</h3>
-                        <ul>
-                            <li>Complete privacy - no data sent to external servers</li>
-                            <li>No API costs or rate limits</li>
-                            <li>Offline operation capability</li>
-                            <li>Full control over model selection and parameters</li>
-                            <li>Integration with existing development workflow</li>
-                        </ul>
-                        
-                        <h3>Setup Steps</h3>
-                        <ul>
-                            <li>1. Install LM Studio and download Codestral or Mistral code models</li>
-                            <li>2. Enable LM Studio's local server mode (developer mode)</li>
-                            <li>3. Install VS Code with Cline AI extension</li>
-                            <li>4. Configure Cline AI to use LM Studio's local API endpoint</li>
-                            <li>5. Test the integration with a simple coding task</li>
-                        </ul>
-                    </div>
-                `
-            },
-            'setup-tools': {
-                breadcrumb: ['Local Setup', 'Tools'],
-                title: 'Essential Development Tools',
-                content: `
-                    <div class="content-section">
-                        <h3>AI/ML Libraries</h3>
-                        <ul>
-                            <li>TensorFlow / PyTorch for deep learning</li>
-                            <li>scikit-learn for traditional ML</li>
-                            <li>OpenAI API for language models</li>
-                            <li>Hugging Face Transformers</li>
-                            <li>LM Studio for local LLM hosting (Codestral, Mistral, Qwen code models) - fully local operation</li>
-                        </ul>
-                        
-                        <h3>Development Tools</h3>
-                        <ul>
-                            <li>Postman for API testing</li>
-                            <li>Docker Desktop for containerization</li>
-                            <li>MongoDB/PostgreSQL for databases</li>
-                            <li>Redis for caching</li>
-                        </ul>
-                        
-                        <h3>Monitoring & Debugging</h3>
-                        <ul>
-                            <li>TensorBoard for ML visualization</li>
-                            <li>Weights & Biases for experiment tracking</li>
-                            <li>Chrome DevTools for web debugging</li>
-                            <li>Python debugger (pdb)</li>
-                        </ul>
-                    </div>
-                `
-            },
             'lm-studio-setup': {
                 breadcrumb: ['Local Setup', 'LM Studio Setup'],
                 title: 'LM Studio + VS Code + Cline AI Setup',
@@ -105,6 +17,15 @@ class SetupContent {
                             <li><strong>Cline AI:</strong> Autonomous coding agent extension</li>
                         </ul>
                         
+                        <h3>System Requirements</h3>
+                        <ul>
+                            <li><strong>Operating System:</strong> macOS (Apple Silicon), Windows (x64/ARM64), or Linux (x64)</li>
+                            <li><strong>Processor:</strong> Must support AVX2 instructions</li>
+                            <li><strong>Memory:</strong> 8GB+ RAM recommended (16GB+ for larger models)</li>
+                            <li><strong>Storage:</strong> Several GB free space for model downloads</li>
+                            <li><strong>GPU:</strong> Optional but recommended for faster inference</li>
+                        </ul>
+                        
                         <h3>Step-by-Step Setup</h3>
                         <h4>1. Install LM Studio</h4>
                         <ul>
@@ -116,9 +37,9 @@ class SetupContent {
                         <h4>2. Configure LM Studio Server</h4>
                         <ul>
                             <li>Load your chosen coding model in LM Studio</li>
-                            <li>Go to "Local Server" tab and start the server</li>
+                            <li>Go to "Developer" tab and start the local server</li>
                             <li>Note the server URL (typically http://localhost:1234)</li>
-                            <li>Enable developer mode for API access</li>
+                            <li>The server provides OpenAI-compatible API endpoints</li>
                         </ul>
                         
                         <h4>3. Install VS Code Extensions</h4>
@@ -138,10 +59,11 @@ class SetupContent {
                         
                         <h3>Recommended Models</h3>
                         <ul>
-                            <li><strong>Codestral 22B:</strong> Mistral's specialized coding model</li>
-                            <li><strong>Qwen2.5-Coder:</strong> Excellent for code generation and debugging</li>
-                            <li><strong>DeepSeek Coder:</strong> Strong performance on coding tasks</li>
-                            <li><strong>Code Llama:</strong> Meta's code-focused model</li>
+                            <li><strong>Qwen2.5-Coder-32B-Instruct:</strong> Latest and most popular coding model with excellent performance <a href="https://huggingface.co/Qwen/Qwen2.5-Coder-32B-Instruct" target="_blank">🔗 View on HF</a></li>
+                            <li><strong>Qwen2.5-Coder-7B-Instruct:</strong> Smaller version, great for lower-end hardware <a href="https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct" target="_blank">🔗 View on HF</a></li>
+                            <li><strong>Codestral-22B:</strong> Mistral's specialized coding model, well-established <a href="https://huggingface.co/mistralai/Codestral-22B-v0.1" target="_blank">🔗 View on HF</a></li>
+                            <li><strong>DeepSeek-Coder-V2-Lite-Instruct:</strong> Strong performance on coding tasks <a href="https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct" target="_blank">🔗 View on HF</a></li>
+                            <li><strong>CodeLlama-13B-Instruct:</strong> Meta's reliable code-focused model <a href="https://huggingface.co/codellama/CodeLlama-13b-Instruct-hf" target="_blank">🔗 View on HF</a></li>
                         </ul>
                         
                         <h3>Benefits of This Setup</h3>
@@ -151,6 +73,7 @@ class SetupContent {
                             <li><strong>Offline Capable:</strong> Works without internet connection</li>
                             <li><strong>Customizable:</strong> Full control over model parameters</li>
                             <li><strong>Fast Response:</strong> No network latency</li>
+                            <li><strong>MCP Support:</strong> Model Context Protocol for enhanced integrations (v0.3.17+)</li>
                         </ul>
                         
                         <h3>Troubleshooting</h3>

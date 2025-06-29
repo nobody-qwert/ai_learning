@@ -29,36 +29,6 @@ class TopicManager {
                         id: 'agents-overview',
                         title: 'Overview',
                         description: 'Comparison of AI coding agents and their capabilities'
-                    },
-                    {
-                        id: 'github-copilot',
-                        title: 'GitHub Copilot',
-                        description: 'AI pair programmer by GitHub and OpenAI'
-                    },
-                    {
-                        id: 'claude-code',
-                        title: 'Claude Code',
-                        description: 'Anthropic\'s Claude AI for code assistance'
-                    },
-                    {
-                        id: 'google-gemini',
-                        title: 'Google Gemini',
-                        description: 'Google\'s AI coding assistant and CLI tools'
-                    },
-                    {
-                        id: 'openai-codex',
-                        title: 'OpenAI Codex',
-                        description: 'OpenAI\'s code generation model'
-                    },
-                    {
-                        id: 'cline-ai',
-                        title: 'Cline AI',
-                        description: 'Autonomous coding agent for VS Code'
-                    },
-                    {
-                        id: 'agents-architecture',
-                        title: 'Architecture',
-                        description: 'Common agent architecture patterns and designs'
                     }
                 ]
             },

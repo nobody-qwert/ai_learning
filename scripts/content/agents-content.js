@@ -20,6 +20,7 @@ class AgentsContent {
                                         <th>Architecture</th>
                                         <th>Pricing</th>
                                         <th>Key Features</th>
+                                        <th>Links</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -29,31 +30,35 @@ class AgentsContent {
                                         <td>RAG + Code Context</td>
                                         <td>Single Agent</td>
                                         <td>Free/$10/$39/month</td>
-                                        <td>IDE integration, real-time suggestions</td>
+                                        <td>IDE integration, real-time suggestions, agent mode</td>
+                                        <td><a href="https://github.com/features/copilot" target="_blank">Official Site</a></td>
                                     </tr>
                                     <tr>
-                                        <td><strong>Claude (Anthropic)</strong></td>
+                                        <td><strong>Claude Code</strong></td>
                                         <td>Closed Source</td>
                                         <td>Agentic Discovery</td>
                                         <td>Multi-Agent</td>
-                                        <td>Free/$17-20/month</td>
-                                        <td>Long context, reasoning, file analysis</td>
+                                        <td>Free/$20/month</td>
+                                        <td>Long context, reasoning, file analysis, computer use</td>
+                                        <td><a href="https://www.anthropic.com" target="_blank">Official Site</a></td>
                                     </tr>
                                     <tr>
-                                        <td><strong>Google Gemini</strong></td>
+                                        <td><strong>Gemini CLI</strong></td>
                                         <td>Closed Source</td>
                                         <td>RAG + Multimodal</td>
                                         <td>Single Agent</td>
                                         <td>Free/API pricing</td>
-                                        <td>Multimodal input, Google integration</td>
+                                        <td>Multimodal input, Google integration, CLI access</td>
+                                        <td><a href="https://gemini.google.com" target="_blank">Official Site</a></td>
                                     </tr>
                                     <tr>
-                                        <td><strong>OpenAI GPT Models</strong></td>
+                                        <td><strong>OpenAI Codex</strong></td>
                                         <td>Closed Source</td>
                                         <td>RAG</td>
                                         <td>Single Agent</td>
                                         <td>API pricing</td>
-                                        <td>Natural language to code, reasoning</td>
+                                        <td>Natural language to code, reasoning, GPT-4 powered</td>
+                                        <td><a href="https://openai.com/codex" target="_blank">Official Site</a></td>
                                     </tr>
                                     <tr>
                                         <td><strong>Cline</strong></td>
@@ -61,7 +66,11 @@ class AgentsContent {
                                         <td>Agentic Discovery</td>
                                         <td>Single Agent</td>
                                         <td>Free (requires API keys)</td>
-                                        <td>Autonomous coding, file system access</td>
+                                        <td>Autonomous coding, file system access, browser control</td>
+                                        <td>
+                                            <a href="https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev" target="_blank">Official Site</a><br>
+                                            <a href="https://github.com/cline/cline" target="_blank">GitHub Repo</a>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
